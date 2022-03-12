@@ -1,0 +1,131 @@
+.shop__container{
+   display: flex;
+}
+.shop__items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: -12rem 14rem auto 17rem;
+    gap: 7rem;
+}
+.shop__item{
+    background: beige;
+    border-radius: 2rem;
+    padding:1.5rem;
+}
+.shop__item-title{
+    display: flex;
+    justify-content: space-between;
+}
+.shop__item__title-icon{
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.shop__item__title-icon:hover{
+    background-color: black;
+    color: white;
+}
+.shop__item-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+.shop__item-image img{
+    width: 9rem;
+}
+.shop__item-image img:hover{
+    transform: translate(-15px, -7px) rotate(-15deg) scale(2.2);;
+}
+.shop__item-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(113, 66, 139);
+}
+.shop__item-p1{
+    transform: rotate(270deg);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5rem;
+    top: 40rem;
+}
+.shop__item-p2{
+    transform: rotate(90deg);
+    position: absolute;
+    right: 5.7rem;
+    top: 40rem;
+}
+.shop__cart{
+    display: none;
+    position: absolute;
+    background: #f9db9f;
+    padding: 0.5rem;
+    gap: 0.9rem;
+    left: 18rem;
+    border-radius: 11px;
+    top: 19rem;
+    animation: shopCartAnimation 1s ease-in-out;
+    
+
+}
+@keyframes shopCartAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.shop__cart-open{
+    display: flex;
+   
+}
+.shop__cart input{
+    width: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 7px;
+   
+}
+
+.shop__cart-icon{
+    font-size: 1.5rem;
+}
+.shop__cart button{
+    border: none;
+    background: #fd7702;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+@media screen and (max-width : 1200px) {
+    .shop__items{
+        grid-template-columns: 1fr 1fr;
+        margin: -14rem 7rem auto 8rem;
+        gap: 2rem;
+    }
+    .shop__item-p1{left: 2rem;}
+    .shop__item-p2{right: 1.7rem;}
+    .shop__cart{
+        left:9rem;
+        top: 17rem;
+    }
+
+    
+}
+@media screen and (max-width : 600px) {
+    .shop__items{
+        grid-template-columns: 1fr;
+        margin: -11rem 7rem auto 4rem;
+        gap: 1rem;
+    }
+    .shop__item-p1{display: none;}
+    .shop__item-p2{display: none;}
+    .shop__cart{
+        left: 5rem;
+        top: 20rem;
+    }
+
+    
+}
